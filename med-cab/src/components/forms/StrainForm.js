@@ -129,7 +129,7 @@ const FormikStrainForm = withFormik({
     }),
     handleSubmit(values, { setStatus }){
         axios
-        .get('https://projmedcab2-01-10-2020.herokuapp.com/search', values)
+        .get('#', values)
         .then(res => {
             setStatus(res.data);
             console.log(res);

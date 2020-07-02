@@ -17,7 +17,7 @@ export const LOGIN_FAILURE = 'LOGIN FAILURE';
 export const loginUser = credentials => dispatch => {
   dispatch({ type: START_LOGIN });
   axios
-    .post('https://node-server-med-cabinet.herokuapp.com/api/auth/login', credentials)
+    .post('api/auth/login', credentials)
     .then(res => {
       localStorage.setItem('token', res.data.token)
       localStorage.setItem('id', res.data.id)
@@ -38,7 +38,7 @@ export const getUserInfo = () => dispatch => {
 
   const id = localStorage.getItem('id')
   axiosWithAuth()
-    .get(`https://node-server-med-cabinet.herokuapp.com/api/auth/${id}`)
+    .get(`${id}`)
     .then(res => {
       dispatch({ type: GET_USER_INFO_SUCCESS, payload: res.data });
     })

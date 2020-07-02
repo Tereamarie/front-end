@@ -6,7 +6,7 @@ import './App.css';
 import SignUp from './components/sign-up-form/signUp';
 import LogIn from './components/login-form/logIn';
 import { MainContainer } from './AppStyles'
-
+import NavBar from './components/dashboard/NavBar';
 
 import { getUserInfo } from './store/actions/userAction';
 import Strains from './components/strains/Strains';
@@ -23,7 +23,7 @@ function App({getUserInfo}) {
 
   return (
     <>
-   
+    <NavBar />
     <MainContainer>
       <Route exact path = '/log-in' component = {LogIn} />
       <Route exact path = '/register' component = {SignUp} />

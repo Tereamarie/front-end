@@ -19,7 +19,7 @@ const BIGBOY = styled.div`
 const SavedStrainsList = (props) => {
     const savedStrains = useSelector(state => state.strains.savedStrains);
 
-    const [filters, setFilters] = useState({
+    const [filter, setFilter] = useState({
         search: '',
         type: 'select',
         effect: 'select',
@@ -28,7 +28,7 @@ const SavedStrainsList = (props) => {
     const [searchResults, setSearchResults] = useState(savedStrains);
 
     useEffect(() => {
-        const lowerCaseSearch = filters.search.toLowerCase();
+        const lowerCaseSearch = filter.search.toLowerCase();
         let results = savedStrains.filter(strain => 
             strain.name.toLowerCase().includes(lowerCaseSearch)
             || strain.type.toLowerCase().includes(lowerCaseSearch)
@@ -37,22 +37,22 @@ const SavedStrainsList = (props) => {
         );
 
         results = results.filter(strain => 
-            filters.type === 'select' || strain.type.toLowerCase().includes(filters.type.toLowerCase())
+            filter.type === 'select' || strain.type.toLowerCase().includes(filter.type.toLowerCase())
             );
 
         results = results.filter(strain => 
-            filters.effect === 'select' || strain.effects.toLowerCase().includes(filters.effect.toLowerCase())
+            filter.effect === 'select' || strain.effects.toLowerCase().includes(filter.effect.toLowerCase())
         );
 
         results = results.filter(strain => 
-            filters.symptom === 'select' || strain.description.toLowerCase().includes(filters.symptom.toLowerCase())
+            filter.symptom === 'select' || strain.description.toLowerCase().includes(filter.symptom.toLowerCase())
         );
 
         setSearchResults(results);
-    },[filters])
+    }, [filter])
 
     const handleChange = e => {
-        setFilters({...filters, [e.target.name]: e.target.value});
+        setFilter({...filter, [e.target.name]: e.target.value});
     }
 
     return (
