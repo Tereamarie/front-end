@@ -2,20 +2,25 @@ import styled from 'styled-components';
 ///import FormBackground from '../../images/formBackground.jpg';
 
 export const SignIn = styled.div`
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-   
-    background-repeat: repeat;
-    background-size: 100%;
-    text-align: center;
-    border: 3px solid black;
-    width: 40%;
-    max-width: 100%;
-    margin: 25% auto;
-    box-shadow: 5px 8px 5px black;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color:#66878a;
+background-repeat: repeat;
+background-size: 100%;
+border: 1px solid black;
+flex-wrap: wrap;
+width: 30%;
+height: 20%;
+margin: 25% auto;
+font-size: 20px;
+color: white; 
+opacity: 0.9;
+z-index: 1;
+padding: 20px ;
+width: 50%;
+box-shadow: 15px 18px 15px black;
 
     @media (max-width: 1254px) {
         width: 60%;
@@ -28,7 +33,7 @@ export const SignIn = styled.div`
 `;
 
 export const FormContainer = styled.div`
-    background: rgba(255,255,204, 0.1);
+    background: #66878a;
     z-index: 2;
     // display:flex;
     // justify-content: center;

@@ -92,7 +92,7 @@ const SignUpValidation = withFormik ({
     }),
     handleSubmit(values, { setStatus, props }) {
         console.log('Submitting', values);
-        const URL = 'https://node-server-med-cabinet.herokuapp.com/api/auth/register';
+        const URL = 'api/auth/register';
 
         const newUser = {
             email: values.email,

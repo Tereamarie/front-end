@@ -21,7 +21,7 @@ export default function Strains() {
         ) : (
             <div>
                 <div className="menu">
-                    <h1 style={{textAlign: 'center', color: 'white', fontWeight: '700', backgroundColor: '#264D2F', padding: '2%', width: '600px', boxShadow: '3px 5px 3px black'}}>Strain Menu:</h1>
+                    <h1 style={{textAlign: 'center', color: 'white', fontWeight: '700', backgroundColor: 'yellow', padding: '2%', width: '600px', boxShadow: '3px 5px 3px black'}}>Strain Menu:</h1>
                 </div>
                 <div className="strainslist">
                 {/* {error.length ? error && <p>{error}</p> : <></>} */}

@@ -79,12 +79,13 @@ const LogInValidation = withFormik ({
     }),
     handleSubmit(values, { setStatus, props }) {
         console.log('Submitting', values);
+        // Need node-server-med-cabinet.herokuapp.com HERE//
         const URL = '#/api/auth/login';
 
         axios
             .post(`${URL}`, values)
             .then(res => {
-                console.log("error", res.data);
+                console.log("Bye Felica", res.data);
                 setStatus(res.data);
                 localStorage.setItem("token", res.data.credentials.token);
                 props.history.push('/dashboard');

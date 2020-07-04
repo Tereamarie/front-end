@@ -51,5 +51,3 @@ const Strain = props => {
 
 export default Strain;
 
-// random filler img for weed
-// img="https://www.cannabisreports.com/images/strains/9/full_94ac38e7dbb3e8c7bcad9e7b83f56075a812350b.jpg"

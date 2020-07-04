@@ -41,9 +41,12 @@ const NavBar = ({ loggedIn, logoutUser }) => {
   }
 
   return (
+    //Need MARKETING LINK HERE at the href//
     <div>
       <NavDiv>
+        
           <div>
+            
               <a href="Marketing/index.html">Home</a>
           </div>
           <div>

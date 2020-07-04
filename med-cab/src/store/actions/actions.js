@@ -21,6 +21,3 @@ export const removeStrain = strain => dispatch => {
   dispatch(removeStrainFromSaved(strain));
 };
 
-export const addEntryToLog = entry => {
-  return { type: Types.ADD_LOG_TO_DOSAGE_LOGS, payload: entry };
-};
